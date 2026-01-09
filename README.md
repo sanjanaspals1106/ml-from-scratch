@@ -21,3 +21,12 @@ No high-level ML libraries are used.
 - ML view: fitting a line/plane to data
 
 ---
+
+## Book 2 — Linear Regression (Learning via Optimization)
+- Loss function: Mean Squared Error (MSE)
+- Error as a function of parameters
+- Loss surface and convexity
+- Gradient as direction of steepest increase
+- Gradient descent as iterative learning
+- Learning rate and convergence
+- ML view: learning parameters by minimizing error

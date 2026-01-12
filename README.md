@@ -42,3 +42,17 @@ No high-level ML libraries are used.
 - Why it doesn’t scale (matrix inversion)
 - ML view: exact solution vs iterative learning
 
+---
+
+## Book 4 — Logistic Regression (Sigmoid)
+
+- Binary classification setup: \( y \in \{0, 1\} \)
+- Linear model produces a confidence score: \( z = w^T x + b \)
+- Problem: linear outputs are unbounded and not probabilities
+- Sigmoid function: \( \sigma(z) = \frac{1}{1 + e^{-z}} \)
+- Role of sigmoid: map \( (-\infty, +\infty) \rightarrow (0, 1) \)
+- Interpretation: \( \sigma(z) = P(y = 1 \mid x) \)
+- Decision boundary at \( z = 0 \Rightarrow \sigma(z) = 0.5 \)
+- Geometry unchanged: decision boundary remains linear
+- ML view: linear model + probability calibration layer
+

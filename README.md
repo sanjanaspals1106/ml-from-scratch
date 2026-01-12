@@ -53,6 +53,17 @@ No high-level ML libraries are used.
 - Role of sigmoid: map \( (-\infty, +\infty) \rightarrow (0, 1) \)
 - Interpretation: \( \sigma(z) = P(y = 1 \mid x) \)
 - Decision boundary at \( z = 0 \Rightarrow \sigma(z) = 0.5 \)
-- Geometry unchanged: decision boundary remains linear
-- ML view: linear model + probability calibration layer
+
+---
+
+## Book 5 — Log Loss & Gradients
+
+- Classification error as probability error, not value error
+- Failure of MSE for classification (flat gradients, weak penalties)
+- Log loss as confidence-based penalty
+- Heavy punishment for confident wrong predictions
+- Log loss formula for binary classification
+- Numerical stability via probability clipping
+- Gradient intuition: correction signal from prediction error
+
 

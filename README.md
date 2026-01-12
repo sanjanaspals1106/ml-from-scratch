@@ -66,4 +66,17 @@ No high-level ML libraries are used.
 - Numerical stability via probability clipping
 - Gradient intuition: correction signal from prediction error
 
+---
+
+##  Book 6 — Logistic Regression (Training Loop)
+
+- Binary classification using gradient descent  
+- Linear score: \( z = w^T x + b \)  
+- Sigmoid maps score to confidence: \( \hat{y} = \sigma(z) \)  
+- Log loss penalizes confident wrong predictions  
+- Gradient driven by confidence error: \( \hat{y} - y \)  
+- Training shifts a linear decision boundary  
+- Loss improves confidence; accuracy may plateau  
+- Learning rate controls convergence behavior  
+
 

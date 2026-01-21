@@ -34,18 +34,15 @@ No high-level ML libraries are used.
 ---
 
 ## Book 3 — Linear Regression (Normal Equation)
+
 - Least squares formulation in matrix form
 - Objective: minimize squared error  
-  \[
-  \min_w \|Xw - y\|^2
-  \]
-- Closed-form solution:
-  \[
-  w = (X^\top X)^{-1} X^\top y
-  \]
-- Geometric interpretation: projection of \( y \) onto the column space of \( X \)
-- Conditions for invertibility of \( X^\top X \)
-- Failure cases: singular matrices and multicollinearity
+  min ‖Xw − y‖²
+- Closed-form solution (Normal Equation):  
+  w = (XᵀX)⁻¹Xᵀy
+- Geometric interpretation: projection of y onto the column space of X
+- Conditions for invertibility of XᵀX
+- Failure cases: singularity and multicollinearity
 - Computational cost of matrix inversion
 - Why the normal equation does not scale
 - ML view: exact solution vs iterative learning
@@ -54,31 +51,17 @@ No high-level ML libraries are used.
 
 ## Book 4 — Logistic Regression (Sigmoid)
 
-- Binary classification setup:  
-  \[
-  y \in \{0, 1\}
-  \]
-- Linear model produces a score:
-  \[
-  z = w^\top x + b
-  \]
+- Binary classification setup: y ∈ {0, 1}
+- Linear model produces a score:  
+  z = wᵀx + b
 - Problem: linear scores are unbounded and not probabilities
-- Sigmoid function:
-  \[
-  \sigma(z) = \frac{1}{1 + e^{-z}}
-  \]
-- Mapping:
-  \[
-  (-\infty, +\infty) \rightarrow (0, 1)
-  \]
-- Probabilistic interpretation:
-  \[
-  \sigma(z) = P(y = 1 \mid x)
-  \]
-- Decision boundary:
-  \[
-  z = 0 \;\Rightarrow\; \sigma(z) = 0.5
-  \]
+- Sigmoid function:  
+  σ(z) = 1 / (1 + e⁻ᶻ)
+- Mapping: (−∞, +∞) → (0, 1)
+- Probabilistic interpretation:  
+  σ(z) = P(y = 1 | x)
+- Decision boundary:  
+  z = 0 ⇒ σ(z) = 0.5
 
 ---
 
@@ -97,21 +80,15 @@ No high-level ML libraries are used.
 ## Book 6 — Logistic Regression (Training Loop)
 
 - Binary classification using gradient descent
-- Linear score computation:
-  \[
-  z = w^\top x + b
-  \]
-- Sigmoid maps score to confidence:
-  \[
-  \hat{y} = \sigma(z)
-  \]
+- Linear score computation:  
+  z = wᵀx + b
+- Sigmoid maps score to confidence:  
+  ŷ = σ(z)
 - Log loss penalizes confident wrong predictions
-- Gradient signal for parameters:
-  \[
-  \nabla_w \mathcal{L} = (\hat{y} - y)x
-  \]
-- Training updates a linear decision boundary
-- Loss reflects confidence improvement; accuracy may plateau
+- Gradient signal for parameters:  
+  ∂L/∂w = (ŷ − y)x
+- Training shifts a linear decision boundary
+- Loss improves confidence; accuracy may plateau
 - Learning rate controls convergence behavior
 
 ---

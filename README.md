@@ -79,4 +79,20 @@ No high-level ML libraries are used.
 - Loss improves confidence; accuracy may plateau  
 - Learning rate controls convergence behavior  
 
+---
 
+## Book 7 — Model Evaluation (Judging Performance)
+
+- Training vs testing performance
+- Why training accuracy is misleading
+- Generalization and unseen data
+- Manual train–test split
+- Confusion matrix as the foundation of evaluation
+- Error types: true positives, false positives, false negatives, true negatives
+- Accuracy and its failure on imbalanced data
+- Precision as control over false positives
+- Recall as control over false negatives
+- Precision–recall trade-off via decision threshold
+- F1 score as balanced performance measure
+- Evaluation as failure analysis, not score maximization
+- ML view: understanding *how* and *why* a model fails
